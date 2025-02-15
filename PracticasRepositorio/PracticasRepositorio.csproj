@@ -52,8 +52,38 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Recursos\formimagenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursos\formimagenes.Designer.cs">
+      <DependentUpon>formimagenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Practicas\Practica1Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Practicas\Practica1Form.Designer.cs">
+      <DependentUpon>Practica1Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Practicas\Practica2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Practicas\Practica2Form.Designer.cs">
+      <DependentUpon>Practica2Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursos\formimagenes.resx">
+      <DependentUpon>formimagenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Practicas\Practica1Form.resx">
+      <DependentUpon>Practica1Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Practicas\Practica2Form.resx">
+      <DependentUpon>Practica2Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -76,5 +106,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
