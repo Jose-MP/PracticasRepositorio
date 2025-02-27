@@ -33,6 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ClassLibrary1">
+      <HintPath>..\..\Practic3\ClassLibrary1\bin\Debug\ClassLibrary1.dll</HintPath>
+    </Reference>
+    <Reference Include="Practic3, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Practic3.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,6 +58,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Practicas\Practica3Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Practicas\Practica3Form.Designer.cs">
+      <DependentUpon>Practica3Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Recursos\formimagenes.cs">
       <SubType>Form</SubType>
@@ -74,6 +87,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Practicas\Practica3Form.resx">
+      <DependentUpon>Practica3Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Recursos\formimagenes.resx">
       <DependentUpon>formimagenes.cs</DependentUpon>
@@ -106,6 +122,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

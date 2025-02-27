@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PracticasRepositorio.Practicas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,6 +30,13 @@ namespace PracticasRepositorio
             Practica2Form n = new Practica2Form();
             n.MdiParent = this;
             n.Show();
+        }
+
+        private void practica3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Practica3Form o = new Practica3Form();
+            o.MdiParent = this;
+            o.Show();
         }
     }
 }

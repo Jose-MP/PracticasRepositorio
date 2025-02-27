@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.practica1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.practica2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.practica3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,7 +40,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.practica1ToolStripMenuItem,
-            this.practica2ToolStripMenuItem});
+            this.practica2ToolStripMenuItem,
+            this.practica3ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(990, 28);
@@ -59,6 +61,13 @@
             this.practica2ToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.practica2ToolStripMenuItem.Text = "Practica 2";
             this.practica2ToolStripMenuItem.Click += new System.EventHandler(this.practica2ToolStripMenuItem_Click);
+            // 
+            // practica3ToolStripMenuItem
+            // 
+            this.practica3ToolStripMenuItem.Name = "practica3ToolStripMenuItem";
+            this.practica3ToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
+            this.practica3ToolStripMenuItem.Text = "Practica 3";
+            this.practica3ToolStripMenuItem.Click += new System.EventHandler(this.practica3ToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -82,6 +91,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem practica1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem practica2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem practica3ToolStripMenuItem;
     }
 }
 
