@@ -2,6 +2,13 @@
 using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace PracticasRepositorio.Practicas
 {
@@ -117,15 +124,56 @@ namespace PracticasRepositorio.Practicas
 
         private void btnActualizar_Click(object sender, EventArgs e) 
         {
-
+            llenarGrid();
         }
         private void btnBorrar_Click(object sender, EventArgs e) 
-        { 
-
+        {
+            try
+            {
+                if (dgvAlumnos.SelectedRows.Count > 0)
+                {
+                    string noControl = dgvAlumnos.SelectedRows[0].Cells["NoControl"].Value.ToString();
+                    string consultaSQL = $"DELETE FROM Alumnos WHERE NoControl = '{noControl}'";
+                    EjecutaComando(consultaSQL);
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione un alumno para eliminar.");
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show("Error en el sistema: " + Ex.Message);
+            }
         }
         private void btnBuscar_Click(object sender, EventArgs e) 
         {
-
+            try
+            {
+                string noControlBuscar = txtNoControl.Text.Trim();
+                if (!string.IsNullOrEmpty(noControlBuscar))
+                {
+                    foreach (DataGridViewRow row in dgvAlumnos.Rows)
+                    {
+                        if (row.Cells["NoControl"].Value != null && row.Cells["NoControl"].Value.ToString() == noControlBuscar)
+                        {
+                            string nombre = row.Cells["nombre"].Value.ToString();
+                            string carrera = row.Cells["carrera"].Value.ToString();
+                            MessageBox.Show($"No. Control: {noControlBuscar}\nNombre: {nombre}\nCarrera: {carrera}");
+                            return;
+                        }
+                    }
+                    MessageBox.Show("Alumno no encontrado.");
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese un número de control.");
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show("Error en el sistema: " + Ex.Message);
+            }
         }
     }
 }
