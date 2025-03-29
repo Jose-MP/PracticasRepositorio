@@ -38,5 +38,24 @@ namespace PracticasRepositorio
             o.MdiParent = this;
             o.Show();
         }
+
+        private void practicaBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void sQLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PracticaBaseSQL a = new PracticaBaseSQL();
+            a.MdiParent = this;
+            a.Show();
+        }
+
+        private void mySQLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PracticaBaseMySQL o = new PracticaBaseMySQL();
+            o.MdiParent = this;
+            o.Show();
+        }
     }
 }
