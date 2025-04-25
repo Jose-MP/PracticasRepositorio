@@ -196,5 +196,9 @@
   <ItemGroup>
     <Folder Include="Practica5\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Clases y Bibliotecas p3\ClassLibrary1.dll" />
+    <Content Include="Clases y Bibliotecas p3\Practic3.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
