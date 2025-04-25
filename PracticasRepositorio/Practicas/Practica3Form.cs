@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClassLibrary1;
-
+//a
 namespace PracticasRepositorio.Practicas
 {
     public partial class Practica3Form : Form
