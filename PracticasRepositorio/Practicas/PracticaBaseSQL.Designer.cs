@@ -185,7 +185,7 @@
             this.btnCreaTabla.UseVisualStyleBackColor = true;
             this.btnCreaTabla.Click += new System.EventHandler(this.btnCreaTabla_Click);
             // 
-            // PracticaBase
+            // PracticaBaseSQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -204,7 +204,7 @@
             this.Controls.Add(this.txtCarrera);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtNoControl);
-            this.Name = "PracticaBase";
+            this.Name = "PracticaBaseSQL";
             this.Text = "PracticaBase";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();
             this.ResumeLayout(false);
