@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaDeContactos", "AgendaDeContactos\AgendaDeContactos.csproj", "{CBDE0B5F-B3AC-44F0-A2E8-7B61B73A0A4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBDE0B5F-B3AC-44F0-A2E8-7B61B73A0A4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBDE0B5F-B3AC-44F0-A2E8-7B61B73A0A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBDE0B5F-B3AC-44F0-A2E8-7B61B73A0A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBDE0B5F-B3AC-44F0-A2E8-7B61B73A0A4A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1C166AA-C342-4120-948D-6270E7A710E2}
+	EndGlobalSection
+EndGlobal
