@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgendaDeContactos.Views.RegistroPage"
+             Title="Registro">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+
+            <Label Text="Registro"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="#0D47A1"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,20"/>
+
+            <Entry Placeholder="Nombre completo" />
+
+            <Entry Placeholder="Correo electrónico" Keyboard="Email" />
+
+            <Entry Placeholder="Confirmar correo electrónico" Keyboard="Email" />
+
+            <Entry Placeholder="Contraseña" IsPassword="True" />
+
+            <Entry Placeholder="Confirmar contraseña" IsPassword="True" />
+
+            <Entry Placeholder="Número de teléfono" Keyboard="Telephone" />
+
+            <Button Text="Registrar"
+                    BackgroundColor="#2196F3"
+                    TextColor="White"
+                    CornerRadius="8"
+                    HeightRequest="50"
+                    FontSize="16"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

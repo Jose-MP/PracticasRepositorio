@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgendaDeContactos.CrearContactoPage"
+             Title="CrearContactoPage">
+    <ScrollView>
+        <FlexLayout 
+            Direction="Column"
+            AlignItems="Center"
+            JustifyContent="Start"
+            Padding="30"
+            Wrap="NoWrap">
+
+            <Entry Placeholder="Nombre" WidthRequest="250" />
+            <Entry Placeholder="Teléfono" WidthRequest="250" />
+            <Entry Placeholder="Correo" WidthRequest="250" />
+            <Entry Placeholder="Dirección" WidthRequest="250" />
+
+            <Button Text="Guardar Contacto"
+                    BackgroundColor="#1E88E5"
+                    TextColor="White"
+                    CornerRadius="12"
+                    WidthRequest="250"
+                    HeightRequest="55"
+                    FontSize="18" />
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>
+    
