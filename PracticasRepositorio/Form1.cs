@@ -42,6 +42,8 @@ namespace PracticasRepositorio
         private void practicaBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
         {
            //o
+           //a
+           //e
         }
 
         private void sQLToolStripMenuItem_Click(object sender, EventArgs e)
