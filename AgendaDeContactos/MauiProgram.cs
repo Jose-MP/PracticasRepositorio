@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
+using AgendaDeContactos.Services; 
 
 namespace AgendaDeContactos
 {
@@ -18,8 +19,9 @@ namespace AgendaDeContactos
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
+            builder.Services.AddSingleton<DatabaseService>();
 
             return builder.Build();
         }

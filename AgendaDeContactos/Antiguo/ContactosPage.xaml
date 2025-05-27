@@ -2,22 +2,30 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AgendaDeContactos.ContactosPage"
-             Title="ContactosPage">
+             Title="ContactosPage"
+             BackgroundColor="#c3c68e">
     <VerticalStackLayout Padding="10">
-        <Label Text="Mis Contactos" FontSize="Large" />
-        <CollectionView ItemsSource="{Binding Contactos}">
+        <CollectionView x:Name="contactosView" 
+         ItemsSource="{Binding Contacto}"
+         SelectionMode="Single" SelectionChanged="OnContactoSeleccionado">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Border Margin="5" Padding="10">
-                        <StackLayout>
-                            <Label Text="{Binding Nombre}" FontAttributes="Bold" />
-                            <Label Text="{Binding Telefono}" />
-                            <Label Text="{Binding Correo}" />
-                        </StackLayout>
-                    </Border>
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems>
+                                <SwipeItem Text="Eliminar" BackgroundColor="#a08265" Invoked="OnEliminarContacto"/>
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+                        <Grid Padding="10" BackgroundColor="#EDE7D9">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Nombre}" FontAttributes="Bold" TextColor="#4E342E"/>
+                                <Label Text="{Binding Telefono}" TextColor="#4E342E"/>
+                                <Label Text="{Binding CorreoElectronico}" FontSize="Small" TextColor="#4E342E"/>
+                            </VerticalStackLayout>
+                        </Grid>
+                    </SwipeView>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
     </VerticalStackLayout>
 </ContentPage>
-    

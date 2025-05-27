@@ -2,28 +2,14 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AgendaDeContactos.CrearContactoPage"
-             Title="CrearContactoPage">
+             Title="CrearContactoPage"
+             BackgroundColor="#c3c68e">
     <ScrollView>
-        <FlexLayout 
-            Direction="Column"
-            AlignItems="Center"
-            JustifyContent="Start"
-            Padding="30"
-            Wrap="NoWrap">
-
-            <Entry Placeholder="Nombre" WidthRequest="250" />
-            <Entry Placeholder="Teléfono" WidthRequest="250" />
-            <Entry Placeholder="Correo" WidthRequest="250" />
-            <Entry Placeholder="Dirección" WidthRequest="250" />
-
-            <Button Text="Guardar Contacto"
-                    BackgroundColor="#1E88E5"
-                    TextColor="White"
-                    CornerRadius="12"
-                    WidthRequest="250"
-                    HeightRequest="55"
-                    FontSize="18" />
-        </FlexLayout>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Entry x:Name="nombreEntry" Placeholder="Nombre" BackgroundColor="#EDE7D9" TextColor="#4E342E" PlaceholderColor="DimGray"/>
+            <Entry x:Name="telefonoEntry" Placeholder="Teléfono" Keyboard="Telephone" BackgroundColor="#EDE7D9" TextColor="#4E342E" PlaceholderColor="DimGray"/>
+            <Entry x:Name="correoEntry" Placeholder="Correo Electrónico" Keyboard="Email" BackgroundColor="#EDE7D9" TextColor="#4E342E" PlaceholderColor="DimGray"/>
+            <Button Text="Guardar" Clicked="OnGuardarClicked" BackgroundColor="#a08265" TextColor="White" CornerRadius="8" HeightRequest="50" />
+        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
-    

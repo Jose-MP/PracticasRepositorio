@@ -2,10 +2,10 @@ namespace AgendaDeContactos.Views;
 
 public partial class LoadingPage : ContentPage
 {
-	public LoadingPage()
-	{
-		InitializeComponent();
-	}
+    public LoadingPage()
+    {
+        InitializeComponent();
+    }
     protected override async void OnNavigatedTo(NavigatedToEventArgs args)
     {
         if (await isAuthenticated())

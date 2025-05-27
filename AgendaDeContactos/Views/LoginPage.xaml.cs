@@ -1,45 +1,57 @@
-namespace AgendaDeContactos.Views;
+using AgendaDeContactos.Services;
+using AgendaDeContactos.Modelos;
 
-public partial class LoginPage : ContentPage
+namespace AgendaDeContactos.Views
 {
-    public LoginPage()
+    public partial class LoginPage : ContentPage
     {
-        InitializeComponent();
-    }
+        private readonly DatabaseService _databaseService;
 
-    protected override bool OnBackButtonPressed()
-    {
-        Application.Current.Quit();
-        return true;
-    }
-
-    private async void TapGestureRecognizerPwd_Tapped(object sender, TappedEventArgs e)
-    {
-        await Shell.Current.GoToAsync("///contra");
-    }
-
-    private async void TapGestureRecognizerReg_Tapped(object sender, TappedEventArgs e)
-    {
-        await Shell.Current.GoToAsync("///registro");
-    }
-
-    private async void LoginButton_Clicked(object sender, EventArgs e)
-    {
-        if (IsCredentialCorrect(Username.Text, Password.Text))
+        public LoginPage()
         {
-            Preferences.Set("UsuarioActual", Username.Text.Trim());
-            await SecureStorage.SetAsync("hasAuth", "true");
-            await Shell.Current.GoToAsync("///main"); // Navega al tab de inicio
+            InitializeComponent();
+            _databaseService = new DatabaseService();
         }
-        else
-        {
-            Preferences.Remove("UsuarioActual");
-            await DisplayAlert("Login failed", "Username or password is invalid", "Try again");
-        }
-    }
 
-    bool IsCredentialCorrect(string username, string password)
-    {
-        return username == "admin" && password == "1234";
+        protected override bool OnBackButtonPressed()
+        {
+            Application.Current.Quit();
+            return true;
+        }
+
+        private async void TapGestureRecognizerPwd_Tapped(object sender, TappedEventArgs e)
+        {
+            await Shell.Current.GoToAsync("///contra"); // Mantiene tu ruta original
+        }
+
+        private async void TapGestureRecognizerReg_Tapped(object sender, TappedEventArgs e)
+        {
+            await Shell.Current.GoToAsync("///registro"); // Mantiene tu ruta original
+        }
+
+        private async void LoginButton_Clicked(object sender, EventArgs e)
+        {
+            var nombre = NombreEntry.Text?.Trim();
+            var password = PasswordEntry.Text;
+
+            if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(password))
+            {
+                await DisplayAlert("Error", "Debes ingresar nombre y contraseña", "OK");
+                return;
+            }
+
+            var usuario = await _databaseService.ValidarLogin(nombre, password);
+
+            if (usuario != null)
+            {
+                Preferences.Set("UsuarioActual", usuario.Nombre);
+                await SecureStorage.SetAsync("hasAuth", "true");
+                await Shell.Current.GoToAsync("///main"); // Mantiene tu ruta original
+            }
+            else
+            {
+                await DisplayAlert("Error", "Nombre de usuario o contraseña incorrectos", "OK");
+            }
+        }
     }
 }

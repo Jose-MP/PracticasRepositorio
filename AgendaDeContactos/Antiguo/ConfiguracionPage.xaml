@@ -2,16 +2,17 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AgendaDeContactos.ConfiguracionPage"
-             Title="ConfiguracionPage">
+             Title="ConfiguracionPage"
+             BackgroundColor="#c3c68e">
     <AbsoluteLayout>
         <Label Text="Configuración"
                FontSize="28"
                FontAttributes="Bold"
-               TextColor="#0D47A1"
+               TextColor="#4E342E"
                AbsoluteLayout.LayoutBounds="0.5,0.1,-1,-1"
                AbsoluteLayout.LayoutFlags="PositionProportional"/>
 
-        <Frame BackgroundColor="#F5F5F5"
+        <Frame BackgroundColor="#EDE7D9"
                CornerRadius="10"
                Padding="15"
                AbsoluteLayout.LayoutBounds="0.5,0.3,0.8,-1"
@@ -19,35 +20,23 @@
             <HorizontalStackLayout Spacing="15">
                 <Label Text="Activar Notificaciones"
                        VerticalOptions="Center"
-                       TextColor="Black"
+                       TextColor="#4E342E"
                        FontSize="18"/>
                 <Switch HorizontalOptions="End"
-                        OnColor="#1976D2"/>
+                        OnColor="#a08265"/>
             </HorizontalStackLayout>
         </Frame>
 
-        <Button Text="Cambiar Tema"
-                BackgroundColor="#1976D2"
+        <Button Margin="0,20,0,0"
+                Text="Logout"
+                x:Name="LogoutButton"
+                BackgroundColor="#a08265"
                 TextColor="White"
                 CornerRadius="12"
                 HeightRequest="50"
                 FontSize="18"
                 AbsoluteLayout.LayoutBounds="0.5,0.5,0.6,-1"
-                AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"/>
-
-        <Button
-                Margin="0,20,0,0"
-                Text="Logout"
-                x:Name="LogoutButton"
-            BackgroundColor="#1976D2"
-            TextColor="White"
-            CornerRadius="12"
-            HeightRequest="50"
-            FontSize="18"
-            AbsoluteLayout.LayoutBounds="0.5,0.7,0.2,-1"
-            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+                AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
                 Clicked="LogoutButton_Clicked"/>
     </AbsoluteLayout>
-
 </ContentPage>
-    
